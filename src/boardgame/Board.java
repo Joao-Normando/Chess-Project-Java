@@ -8,7 +8,7 @@ public class Board {
 	
 	public Board(int rows, int columns) {
 		
-		if (rows <1 || columns < 1) {
+		if (rows < 1 || columns < 1) {
 			throw new BoardException("Erro criando tabuleiro é necessario que haja uma linha e uma coluna");
 		}
 		this.rows = rows;
@@ -29,7 +29,7 @@ public class Board {
 		return pieces [row][column];
 	}
 	public Piece piece (Position position) {
-		if(positionExists(position)) {
+		if(!positionExists(position)) {
 			throw new BoardException ("Posição não ligada ao tabuleiro");
 		}
 		return pieces[position.getRow()][position.getColumn()];
