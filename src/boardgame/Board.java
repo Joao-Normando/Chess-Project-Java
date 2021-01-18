@@ -46,7 +46,7 @@ public class Board {
 	}
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Position not on the board");
+			throw new BoardException("A posicao nao esta no tabuleiro");
 		}
 		if (piece(position) == null) {
 			return null;
